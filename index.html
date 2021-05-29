@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form</title>
+</head>
+<style>
+    body {background-color: powderblue;}
+    h1   {color: blue;}
+    #myTextBox1 { margin-left :60px; }
+    #submitbutton {padding: 18px; font-size: large; margin-left :60px; background-color: black; color: white}
+    #myHeader {
+  background-color: black;
+  color:white;
+  padding: 17px;
+  text-align: left;
+} 
+    </style>
+<body>
+
+    <h2 id="myHeader"> Flight Price Prediction </h2>
+    <form action="\predict" method="post">
+        <br>
+        <div>
+            <label id="myTextBox1" type="date">Departure Date</label><br>
+            <input type="datetime-local" id="myTextBox1" name="Date_of_Journey" required>
+        </div>
+       <br>
+       <br>
+      <div>
+        <label id="myTextBox1" type="datetime-local">Arrival Date</label><br>
+      <input id="myTextBox1" name="Arrival_Time" type="datetime-local">
+    </div>
+    <br>
+    <br>
+      <div>
+        <label id="myTextBox1">Source</label><br>
+      <select id="myTextBox1" name="Source" required>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Chennai">Chennai</option>
+          <option value="Kolkata">Kolkata</option>
+          <option value="Banglore">Banglore</option>
+
+      </select>
+    </div>
+    <br>
+    <br>
+    <div>
+        <label id="myTextBox1">Destination</label><br>
+        <select id="myTextBox1" name="Destination" required>
+            <option value="Cochin">Cochin    </option>
+            <option value="Banglore">Banglore   </option>
+            <option value="Delhi">Delhi  </option>
+            <option value="New Delhi">New Delhi    </option>
+            <option value="Hyderabad ">Hyderabad   </option>
+            <option value="Kolkata">Kolkata  </option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <div>
+        <label id="myTextBox1">Stopage</label><br>
+        <select id="myTextBox1" name="Total_Stops" required>
+            <option value="0">non-stop </option>
+            <option value="1">1 stop  </option>
+            <option value="2">2 stops </option>
+            <option value="3">3 stops </option>
+            <option value="4">4 stops </option>
+        </select>
+    </div>
+    <br>
+    <br>
+    <div>
+        <label id="myTextBox1">Airline</label><br>
+        <select id="myTextBox1" name="Airline" required>
+            <option value="Air Asia">Air Asia   </option>
+            <option value="Air India">Air India   </option>
+            <option value="GoAir">GoAir       </option>
+            <option value="IndiGo">IndiGo      </option>
+            <option value="Jet Airways">Jet Airways </option>
+            <option value="Jet Airways Business">Jet Airways Business </option>
+            <option value="Multiple carriers">Multiple carriers   </option>
+            <option value="Multiple carriers Premium economy">Multiple carriers Premium economy       </option>
+            <option value="SpiceJet ">SpiceJet    </option>
+            <option value="Trujet">Trujet </option>
+            <option value="Vistara">Vistara </option>
+            <option value="Vistara Premium economy">Vistara Premium economy    </option>
+            
+
+        </select>
+    </div>
+    <br>
+    <br>
+      <div>
+        <button id="submitbutton",value="Submit">Predict</button>
+        <h1 margin-left :60px; color: black>{{ prediction_text }}</h1>
+      </div>
+    </form>
+    
+
+
+</body>
+</html>
